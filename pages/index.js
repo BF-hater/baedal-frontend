@@ -12,7 +12,7 @@ export default function Home() {
       <Section />
       <main>
         <h1 className="title">
-          Read{" "}
+          R312321321
           <Link href="posts/main">
             <a>this page</a>
           </Link>
