@@ -1,8 +1,6 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Section from 'next/head'
-
-
+import Head from "next/head";
+import Link from "next/link";
+import Section from "next/head";
 
 export default function Home() {
   return (
@@ -11,11 +9,11 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <Section />
+      <Section />
       <main>
         <h1 className="title">
-          Read{' '}
-          <Link href='posts/main'>
+          Read{" "}
+          <Link href="posts/main">
             <a>this page</a>
           </Link>
         </h1>
@@ -61,7 +59,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          hig
           <img src="/vercel.svg" alt="Vercel" className="logo" />
         </a>
       </footer>
@@ -212,5 +210,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
