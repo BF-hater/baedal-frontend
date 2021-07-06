@@ -59,7 +59,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          hig
+          hig321123
           <img src="/vercel.svg" alt="Vercel" className="logo" />
         </a>
       </footer>
