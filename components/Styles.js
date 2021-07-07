@@ -10,22 +10,39 @@ export const Map = styled.div`
 export const Top =styled.div`
 font-size: 18px;
 padding:15px;
-background: #3b5998;
+background: #e9cfff;
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin-bottom : 60px;
+
 `;
 
+export const BackgroundImg = styled.div`
+width: 100%;
+height: 300px;
+display:flex;
+justify-content: center;
+`;
+
+export const Background = styled.div`
+background: no-repeat url('/background.jpg') center center ;
+background-size: 100%;
+opacity: 0.5;
+width:100%;
+height: 300px;
+display:flex;
 
 
+
+`;
 
 export const Main = styled.h1`
 font-size: 35px;
 display: flex;
 flex-direction: row;
 justify-content: center;
-padding:60px
+padding:100px;
+position:absolute;
 `;
 
 export const Input  = styled.input`
@@ -43,10 +60,12 @@ display: flex;
 justify-content: space-between;
 width: 70%;
 margin: 0 auto;
+margin-top: 20px;
 `;
 
 export const  Search = styled.div`
 width: 20%;
+margin-top:20px;
 margin-left: 20px;
 display: flex;
 justify-content: center;
@@ -56,7 +75,7 @@ border-left: 5px solid #efefef;
 
 export const Select = styled.select`
 height: 26px;
-background:darkgrey;
+
 `;
 export const Mapbox = styled.div`
 display:flex;
@@ -73,5 +92,4 @@ align-items:center;
 
 export const A = styled.a`
 color:black;
-
 `;
