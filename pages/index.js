@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import { Main, Top, Map , Input, Button, Section, Search, Select, Mapbox, H1} from '../components/Styles'
+import { Main, Top, Map , Input, Button, Section, Search, Select, Mapbox, H1, A} from '../components/Styles'
 
 
 export default function Home(){
@@ -41,9 +41,10 @@ export default function Home(){
             <option value="제주도">제주도</option>
         </Select>
       </p>
-          <a href="#">코스 추천</a>
-          <a href="#">지역 볼거리</a>
-          <a href="#">로그인</a>
+      <A href="#">홈</A>
+      <A href="#">코스 추천</A>
+      <A href="#">지역 볼거리</A>
+      <A style={{color:"white"}}>로그인</A>
         </Top>
         <Main>데이트 길잡이</Main>
         <Section>
@@ -52,7 +53,7 @@ export default function Home(){
             <Map id="map"></Map>
           </Mapbox>
           <Search>
-            <Input /><Button>검색</Button>
+            <Input type="text" placeholder="데이트 장소를 검색하세요" /><Button>검색</Button>
           </Search>
         </Section>
     </>
