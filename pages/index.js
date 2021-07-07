@@ -1,9 +1,9 @@
 import {useEffect} from 'react';
-import {Map} from '../components/Styles'
-import {Top} from  '../components/Styles'
-import {All} from '../components/Styles'
+import { Main, Top, Map , Input, Button, Section, Search, Select, Mapbox, H1} from '../components/Styles'
+
 
 export default function Home(){
+  
   useEffect(() => {
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
@@ -28,16 +28,34 @@ export default function Home(){
     // marker.setMap(null); 
   }, [])
   return(
-    <All>
+    <>
       <Top>
-          <a href="#">가구배달</a>
-          <a href="#">배달건수</a>
-          <a href="#">주문현황</a>
+      <p>
+        <span>데이트 장소: </span>
+        <Select>
+            <option value="" disabled>데이트 장소를 선택해주세요.</option>
+            <option value="서울시">서울시</option>
+            <option value="경기도">경기도</option>
+            <option value="인천">인천</option>
+            <option value="충청도">충청도</option>
+            <option value="제주도">제주도</option>
+        </Select>
+      </p>
+          <a href="#">코스 추천</a>
+          <a href="#">지역 볼거리</a>
           <a href="#">로그인</a>
         </Top>
-        <Map id="map" />
-        <input type="text" ></input>
-    </All>
+        <Main>데이트 길잡이</Main>
+        <Section>
+          <Mapbox>
+            <H1>기본위치</H1>
+            <Map id="map"></Map>
+          </Mapbox>
+          <Search>
+            <Input /><Button>검색</Button>
+          </Search>
+        </Section>
+    </>
   )
 }
 

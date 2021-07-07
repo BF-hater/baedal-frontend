@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import "../styles/global.css"
 
 function MyApp({Component, pageProps}) {
   return (
@@ -12,10 +13,14 @@ function MyApp({Component, pageProps}) {
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
         {/* <!-- services와 clusterer, drawing 라이브러리 불러오기 --> */}
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet" />
       </Head>
-      
-      <Component {...pageProps} />
+
+      <body>
+        <Component {...pageProps} />
+      </body>
     </>
   )
 }
