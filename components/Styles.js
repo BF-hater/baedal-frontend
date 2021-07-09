@@ -51,14 +51,15 @@ height:30px;
 `;
 
 export const Button = styled.button`
-width: 40px;
+width: 46px;
 height:36px;
+margin-left:3px;
 `;
 
 export const Section = styled.div`
 display: flex;
 justify-content: space-between;
-width: 70%;
+width: 80%;
 margin: 0 auto;
 margin-top: 20px;
 `;
@@ -68,9 +69,10 @@ width: 20%;
 margin-top:20px;
 margin-left: 20px;
 display: flex;
-justify-content: center;
+flex-direction: column;
 padding-left:50px;
 border-left: 5px solid #efefef;
+margin: 0 auto;
 `;
 
 export const Select = styled.select`
@@ -92,4 +94,10 @@ align-items:center;
 
 export const A = styled.a`
 color:black;
+`;
+
+export const InputBox = styled.div`
+display: flex;
+
+
 `;

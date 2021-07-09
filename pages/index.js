@@ -1,17 +1,21 @@
 import {useEffect} from 'react';
-import { Main, Top, Map , Input, Button, Section, Search, Select, Mapbox, H1, A, Background, BackgroundImg} from '../components/Styles'
+import { Main, Top, Map , Input, Button, Section, Search, Select, Mapbox, H1, A, Background, BackgroundImg, InputBox} from '../components/Styles'
 
 
 export default function Home(){
   
   useEffect(() => {
+  
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new window.kakao.maps.LatLng(37.458342744008654, 126.69792535547877), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
 
-    var map = new window.kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    //지도를 생성합니다
+    var map = new window.kakao.maps.Map(mapContainer, mapOption);
+
+    
 
     // 마커가 표시될 위치입니다 
     var markerPosition  = new window.kakao.maps.LatLng(37.458342744008654, 126.69792535547877); 
@@ -25,11 +29,11 @@ export default function Home(){
     marker.setMap(map);
 
     // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-    // marker.setMap(null); 
+    marker.setMap(null); 
   }, [])
   return(
     <>
-      <Top>
+      <Top> 
         <p>
           <span>데이트 장소: </span>
           <Select>
@@ -56,7 +60,10 @@ export default function Home(){
             <Map id="map"></Map>
           </Mapbox>
           <Search>
-            <Input type="text" placeholder="데이트 장소를 검색하세요" /><Button>검색</Button>
+            <H1>데이트 장소를 검색하세요.</H1>
+            <InputBox>
+              <Input type="text" placeholder="데이트 장소를 검색하세요💕" /><Button>검색</Button>
+            </InputBox>
           </Search>
         </Section>
     </>
